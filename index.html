@@ -272,20 +272,26 @@
             color: var(--gnh-orange); margin-right: 1px;
             padding: 0; letter-spacing: 0; line-height: 1;
         }
+        /* Subtitle de ênfase (ainda menor que slide-title) */
+        .slide-subtitle.is-emphasis {
+            font-size: clamp(1.18rem, 1.85vw, 1.55rem);
+            color: var(--text-soft); line-height: 1.5;
+            font-weight: 500; max-width: 880px;
+        }
 
         /* === HERO === */
         .hero {
             min-height: 100vh; display: flex; align-items: center; justify-content: center;
-            text-align: center; padding-top: 120px; position: relative;
+            text-align: center; padding-top: 90px; padding-bottom: 60px; position: relative;
         }
         .hero-logo-link {
-            display: block; line-height: 0; margin: 0 auto 40px;
+            display: block; line-height: 0; margin: 0 auto 28px;
             width: fit-content; max-width: 100%;
             transition: transform 0.4s ease;
         }
         .hero-logo-link:hover { transform: scale(1.03); }
         .hero-logo {
-            height: 110px; display: block;
+            height: 88px; display: block;
             filter: invert(1) hue-rotate(180deg) brightness(2) contrast(1.45) saturate(1.4)
                     drop-shadow(0 8px 24px rgba(244, 121, 32, 0.18));
         }
@@ -297,7 +303,7 @@
             padding: 7px 16px; border: 1px solid var(--border-light);
             border-radius: 50px; background: rgba(255,255,255,0.02);
             font-size: 0.7rem; letter-spacing: 2.5px; font-weight: 600;
-            color: var(--text-dim); text-transform: uppercase; margin-bottom: 32px;
+            color: var(--text-dim); text-transform: uppercase; margin-bottom: 24px;
         }
         [data-theme="light"] .hero-status {
             background: rgba(255, 255, 255, 0.7);
@@ -312,27 +318,26 @@
 
         .hero h1 {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: clamp(2.4rem, 5.5vw, 4.4rem); font-weight: 800;
-            color: var(--text-main); line-height: 1.05; letter-spacing: -2.2px;
-            margin-bottom: 28px;
+            font-size: clamp(1.95rem, 4.1vw, 3.1rem); font-weight: 800;
+            color: var(--text-main); line-height: 1.1; letter-spacing: -1.4px;
+            margin-bottom: 22px;
         }
         .gradient-text {
             background: linear-gradient(120deg, var(--gnh-orange) 0%, var(--gnh-orange-soft) 50%, #FFB680 100%);
             -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
         }
         .hero p.lead {
-            font-size: 1.18rem; color: var(--text-dim); max-width: 740px;
-            margin: 0 auto 48px; line-height: 1.65;
+            font-size: 1.02rem; color: var(--text-dim); max-width: 700px;
+            margin: 0 auto 44px; line-height: 1.6;
         }
-        .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 80px; }
 
         .hero-stats {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
             max-width: 980px; margin: 0 auto;
         }
         .stat-card {
-            padding: 28px 26px; background: var(--bg-card); border: 1px solid var(--border-light);
-            border-radius: 18px; backdrop-filter: blur(12px); text-align: left;
+            padding: 22px 22px; background: var(--bg-card); border: 1px solid var(--border-light);
+            border-radius: 16px; backdrop-filter: blur(12px); text-align: left;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;
         }
         [data-theme="light"] .stat-card {
@@ -516,25 +521,25 @@
         }
         .mapping-tile h5 {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1rem; font-weight: 700; color: var(--text-main);
-            margin-bottom: 8px; letter-spacing: -0.3px;
+            font-size: 1.18rem; font-weight: 800; color: var(--text-main);
+            margin-bottom: 10px; letter-spacing: -0.5px; line-height: 1.2;
         }
         .mapping-tile p {
-            font-size: 0.83rem; color: var(--text-dim); line-height: 1.55;
+            font-size: 0.86rem; color: var(--text-dim); line-height: 1.55;
         }
 
         /* === MODERN TIMELINE (próximos passos) === */
         .modern-timeline {
             display: flex; justify-content: space-between; position: relative;
-            padding: 40px 0; margin-top: 40px;
+            padding: 36px 0; margin-top: 32px;
         }
         .timeline-line {
-            position: absolute; top: 80px; left: 8%; right: 8%; height: 2px;
+            position: absolute; top: 84px; left: 8%; right: 8%; height: 2px;
             background: linear-gradient(90deg, rgba(244,121,32,0.1) 0%, var(--gnh-orange) 50%, rgba(244,121,32,0.1) 100%);
             z-index: 1; opacity: 0.55; box-shadow: 0 0 15px var(--gnh-orange-glow);
         }
         .timeline-flow {
-            position: absolute; top: 79px; left: 8%; width: 12px; height: 12px;
+            position: absolute; top: 83px; left: 8%; width: 12px; height: 12px;
             border-radius: 50%; background: var(--gnh-orange);
             box-shadow: 0 0 12px var(--gnh-orange), 0 0 24px var(--gnh-orange), 0 0 36px var(--gnh-orange-glow);
             z-index: 3; transform: translate(-50%, -50%);
@@ -549,13 +554,13 @@
             92% { opacity: 1; }
             100% { left: 92%; opacity: 0; }
         }
-        .timeline-step { width: 18%; text-align: center; position: relative; z-index: 2; }
+        .timeline-step { width: 15.5%; text-align: center; position: relative; z-index: 2; }
         .step-icon-wrapper {
-            width: 80px; height: 80px; margin: 0 auto 25px;
+            width: 90px; height: 90px; margin: 0 auto 22px;
             background: var(--bg-main); border: 2px solid var(--border-light);
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.5rem; font-weight: 800; color: var(--text-main);
+            font-size: 1.85rem; font-weight: 800; color: var(--text-main);
             box-shadow: 0 10px 25px rgba(0,0,0,0.5); transition: all 0.4s ease;
             position: relative;
         }
@@ -563,18 +568,16 @@
             background: #FFFFFF; border-color: rgba(0, 0, 0, 0.08);
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         }
-        .step-icon-wrapper i {
-            font-size: 1.6rem;
-        }
         .timeline-step:hover .step-icon-wrapper {
             border-color: var(--gnh-orange); color: var(--gnh-orange);
             box-shadow: 0 0 30px var(--gnh-orange-glow), inset 0 0 15px rgba(244,121,32,0.18);
             transform: scale(1.1);
         }
-        .timeline-step h4 { color: var(--gnh-orange); margin-bottom: 12px; font-weight: 800;
-            font-size: 0.92rem; letter-spacing: 0.5px; text-transform: uppercase;
+        .timeline-step h4 { color: var(--gnh-orange); margin-bottom: 10px; font-weight: 800;
+            font-size: 1.05rem; letter-spacing: 0.5px; text-transform: uppercase;
             font-family: 'Plus Jakarta Sans', sans-serif; }
-        .timeline-step p { font-size: 0.84rem; color: var(--text-dim); line-height: 1.55; }
+        .timeline-step p { font-size: 0.95rem; color: var(--text-dim); line-height: 1.55; }
+        #proximos-passos { padding-top: 110px; padding-bottom: 80px; }
 
         /* === PHASE TIMELINE (vertical) === */
         .phases-track {
@@ -673,6 +676,98 @@
             font-weight: 500;
         }
 
+        /* === PHASES GRID (compact, fits in one screen) === */
+        .phases-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 16px; margin-top: 32px;
+        }
+        .phase-cell {
+            background: var(--bg-card); border: 1px solid var(--border-light);
+            border-radius: 16px; padding: 22px 24px;
+            backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative; overflow: hidden;
+            box-shadow: var(--shadow-glow);
+            display: flex; flex-direction: column;
+        }
+        [data-theme="light"] .phase-cell {
+            backdrop-filter: none; box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+        }
+        .phase-cell::before {
+            content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+            background: linear-gradient(180deg, var(--gnh-orange), transparent);
+            opacity: 0.7; transition: 0.4s;
+        }
+        .phase-cell:hover {
+            transform: translateY(-3px); border-color: var(--border-highlight);
+            box-shadow: var(--shadow-orange);
+        }
+        .phase-cell:hover::before { opacity: 1; box-shadow: 0 0 12px var(--gnh-orange); }
+        .phase-cell-head {
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 10px; margin-bottom: 12px;
+        }
+        .phase-num-badge {
+            width: 38px; height: 38px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--gnh-orange) 0%, var(--gnh-orange-soft) 100%);
+            color: #000; font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800; font-size: 1.05rem;
+            display: inline-flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 15px var(--gnh-orange-glow);
+            flex-shrink: 0;
+        }
+        .phase-cell .phase-tag {
+            display: inline-block; padding: 5px 11px; border-radius: 20px;
+            font-size: 0.58rem; font-weight: 800; letter-spacing: 1.5px;
+            text-transform: uppercase; flex-shrink: 0;
+        }
+        .phase-cell .phase-tag.tag-included {
+            background: var(--gnh-orange); color: #000;
+            box-shadow: 0 0 10px var(--gnh-orange-glow);
+        }
+        .phase-cell .phase-tag.tag-advanced {
+            background: rgba(244,121,32,0.12); color: var(--gnh-orange);
+            border: 1px solid rgba(244,121,32,0.3);
+        }
+        .phase-cell h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.05rem; font-weight: 800; color: var(--text-main);
+            margin-bottom: 8px; letter-spacing: -0.4px; line-height: 1.25;
+        }
+        .phase-cell p {
+            color: var(--text-dim); font-size: 0.86rem; line-height: 1.55;
+        }
+        /* Cell final — destaque visual */
+        .phase-cell.phase-cell-final {
+            background: linear-gradient(145deg, rgba(244,121,32,0.16) 0%, rgba(15,39,71,0.55) 100%);
+            border-color: rgba(244,121,32,0.4);
+            box-shadow: var(--shadow-orange);
+        }
+        [data-theme="light"] .phase-cell.phase-cell-final {
+            background: linear-gradient(145deg, rgba(244,121,32,0.16) 0%, #FFFFFF 75%);
+            box-shadow: 0 10px 28px rgba(244,121,32,0.14);
+        }
+        .phase-cell.phase-cell-final::before {
+            background: var(--gnh-orange); opacity: 1;
+            box-shadow: 0 0 12px var(--gnh-orange);
+        }
+        .phase-cell-final .phase-num-badge {
+            background: var(--text-main); color: var(--gnh-orange);
+            box-shadow: 0 0 14px rgba(255,255,255,0.25);
+        }
+        [data-theme="light"] .phase-cell-final .phase-num-badge {
+            background: #0F2747; color: var(--gnh-orange);
+        }
+        .phase-cell-final h4 { color: var(--text-main); }
+        .phase-cell-final p { color: var(--text-soft); font-weight: 500; }
+        #jornada { padding-top: 110px; padding-bottom: 80px; }
+        @media (max-width: 1024px) {
+            .phases-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .phases-grid { grid-template-columns: 1fr; }
+        }
+
         /* === BUTTONS === */
         .btn {
             display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px;
@@ -717,6 +812,15 @@
             margin: 28px auto; background: var(--gnh-orange); opacity: 0.55;
         }
         .pull-quote::after { margin-bottom: 0; }
+        /* Pull-quote wide: cabe em uma única linha em desktop */
+        .pull-quote.pull-quote-wide {
+            max-width: 1180px;
+            font-size: clamp(1rem, 1.55vw, 1.4rem);
+            padding: 0 16px;
+        }
+        @media (min-width: 1080px) {
+            .pull-quote.pull-quote-wide { white-space: nowrap; }
+        }
 
         /* === QUOTE BREAK === */
         .quote-break {
@@ -766,6 +870,9 @@
             padding: 48px 48px;
             background: linear-gradient(145deg, rgba(244,121,32,0.10) 0%, transparent 100%);
             border-right: 1px solid var(--border-light);
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            text-align: center;
         }
         [data-theme="light"] .contact-left {
             background: linear-gradient(145deg, rgba(244,121,32,0.10) 0%, #FFF 100%);
@@ -991,12 +1098,7 @@
             <p class="lead">Como o nosso mapeamento eleva sua operação ao nível máximo de Segurança, Qualidade e Eficiência — da negociação ao destino final.</p>
         </div>
 
-        <div class="hero-cta" data-aos="fade-up" data-aos-delay="200">
-            <a href="#cenario" class="btn btn-orange magnetic"><i class="fa-solid fa-play"></i> Iniciar Apresentação</a>
-            <a href="#contato" class="btn btn-outline magnetic"><i class="fa-solid fa-handshake"></i> Falar com o Sales Manager</a>
-        </div>
-
-        <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
             <div class="stat-card">
                 <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
                 <div class="stat-label">Segurança</div>
@@ -1096,10 +1198,6 @@
             </li>
         </ul>
 
-        <div class="highlight-box" data-aos="fade-up" data-aos-delay="100">
-            <span class="question-mark">?</span>
-            <p class="question-text">Você sabe <em>exatamente</em> onde a sua operação de exportação <em>perde dinheiro</em> hoje?</p>
-        </div>
     </div>
 </section>
 
@@ -1109,7 +1207,7 @@
         <div data-aos="fade-left">
             <div class="eyebrow">Nossa Solução</div>
             <h2 class="slide-title">O <span class="text-orange">Raio-X</span> Completo da sua exportação.</h2>
-            <p class="slide-subtitle drop-cap">Um diagnóstico estruturado que revela onde o fluxo trava, onde o lucro escapa e onde o crescimento espera para acontecer.</p>
+            <p class="slide-subtitle drop-cap is-emphasis">Um diagnóstico estruturado que revela onde o fluxo trava, onde o lucro escapa e onde o crescimento espera para acontecer.</p>
         </div>
 
         <div class="grid-3">
@@ -1197,8 +1295,8 @@
             </div>
         </div>
 
-        <blockquote class="pull-quote" data-aos="fade-up" data-aos-delay="200">
-            Encontramos as oportunidades ocultas<br>no fluxo administrativo e logístico das suas exportações.
+        <blockquote class="pull-quote pull-quote-wide" data-aos="fade-up" data-aos-delay="200">
+            Encontramos as oportunidades ocultas no fluxo administrativo e logístico das suas exportações.
         </blockquote>
     </div>
 </section>
@@ -1208,7 +1306,7 @@
     <div class="container">
         <div data-aos="fade-up">
             <div class="eyebrow">Como Fazemos</div>
-            <h2 class="slide-title">Mapeamento <span class="text-orange">360°</span>: oito áreas, uma visão unificada.</h2>
+            <h2 class="slide-title">Mapeamento <span class="text-orange">360°</span>: todas as áreas envolvidas, uma visão unificada.</h2>
             <p class="slide-subtitle drop-cap">O diagnóstico completo só é possível quando mergulhamos em cada área envolvida na operação de exportação. Nossa metodologia envolve entrevistas, análise documental e observação dos fluxos reais em cada departamento.</p>
         </div>
 
@@ -1321,80 +1419,60 @@
             <p class="slide-subtitle drop-cap">As duas primeiras etapas são investimento nosso — uma forma de demonstrar valor antes de qualquer compromisso avançado. As três seguintes são módulos opcionais, ativados conforme a maturidade que sua operação deseja alcançar.</p>
         </div>
 
-        <div class="phases-track">
-            <div class="phase-row" data-aos="fade-up" data-aos-delay="100">
-                <div class="phase-marker">
-                    <div class="phase-marker-num">1</div>
-                    <div class="phase-marker-line"></div>
+        <div class="phases-grid">
+            <div class="phase-cell" data-aos="fade-up" data-aos-delay="80">
+                <div class="phase-cell-head">
+                    <div class="phase-num-badge">1</div>
+                    <span class="phase-tag tag-included">Investimento Nosso</span>
                 </div>
-                <div class="phase-card">
-                    <div class="phase-card-head">
-                        <h4>Raio-X Operacional 360°</h4>
-                        <span class="phase-tag tag-included">Investimento Nosso</span>
-                    </div>
-                    <p>Mapeamento imersivo do fluxo atual de exportação — da venda ao embarque. Identificamos gargalos, riscos ocultos e oportunidades de ganho rápido.</p>
-                </div>
+                <h4>Raio-X Operacional 360°</h4>
+                <p>Mapeamento imersivo do fluxo atual de exportação — da venda ao embarque. Identificamos gargalos, riscos ocultos e oportunidades de ganho rápido.</p>
             </div>
 
-            <div class="phase-row" data-aos="fade-up" data-aos-delay="180">
-                <div class="phase-marker">
-                    <div class="phase-marker-num">2</div>
-                    <div class="phase-marker-line"></div>
+            <div class="phase-cell" data-aos="fade-up" data-aos-delay="140">
+                <div class="phase-cell-head">
+                    <div class="phase-num-badge">2</div>
+                    <span class="phase-tag tag-included">Investimento Nosso</span>
                 </div>
-                <div class="phase-card">
-                    <div class="phase-card-head">
-                        <h4>Roadmap Estratégico</h4>
-                        <span class="phase-tag tag-included">Investimento Nosso</span>
-                    </div>
-                    <p>O desenho da solução ideal para a sua operação. Plano de ação claro para reduzir custos, otimizar Incoterms e aprimorar a gestão documental.</p>
-                </div>
+                <h4>Roadmap Estratégico</h4>
+                <p>O desenho da solução ideal para a sua operação. Plano de ação claro para reduzir custos, otimizar Incoterms e aprimorar a gestão documental.</p>
             </div>
 
-            <div class="phase-row" data-aos="fade-up" data-aos-delay="260">
-                <div class="phase-marker">
-                    <div class="phase-marker-num">3</div>
-                    <div class="phase-marker-line"></div>
+            <div class="phase-cell" data-aos="fade-up" data-aos-delay="200">
+                <div class="phase-cell-head">
+                    <div class="phase-num-badge">3</div>
+                    <span class="phase-tag tag-advanced">Módulo Avançado</span>
                 </div>
-                <div class="phase-card">
-                    <div class="phase-card-head">
-                        <h4>Capacitação e Engenharia de Processos</h4>
-                        <span class="phase-tag tag-advanced">Módulo Avançado</span>
-                    </div>
-                    <p>Treinamento das equipes, criação de POPs e reestruturação da comunicação entre Comercial e Logística. Mão na massa, junto com o seu time.</p>
-                </div>
+                <h4>Capacitação e Engenharia de Processos</h4>
+                <p>Treinamento das equipes, criação de POPs e reestruturação da comunicação entre Comercial e Logística. Mão na massa, junto com o seu time.</p>
             </div>
 
-            <div class="phase-row" data-aos="fade-up" data-aos-delay="340">
-                <div class="phase-marker">
-                    <div class="phase-marker-num">4</div>
-                    <div class="phase-marker-line"></div>
+            <div class="phase-cell" data-aos="fade-up" data-aos-delay="260">
+                <div class="phase-cell-head">
+                    <div class="phase-num-badge">4</div>
+                    <span class="phase-tag tag-advanced">Módulo Avançado</span>
                 </div>
-                <div class="phase-card">
-                    <div class="phase-card-head">
-                        <h4>Blindagem e Otimização Logística</h4>
-                        <span class="phase-tag tag-advanced">Módulo Avançado</span>
-                    </div>
-                    <p>Revisão jurídica de contratos internacionais, centralização do despacho aduaneiro e contratação inteligente de fretes para reduzir transit time.</p>
-                </div>
+                <h4>Blindagem e Otimização Logística</h4>
+                <p>Revisão jurídica de contratos internacionais, centralização do despacho aduaneiro e contratação inteligente de fretes para reduzir transit time.</p>
             </div>
 
-            <div class="phase-row" data-aos="fade-up" data-aos-delay="420">
-                <div class="phase-marker">
-                    <div class="phase-marker-num">5</div>
+            <div class="phase-cell" data-aos="fade-up" data-aos-delay="320">
+                <div class="phase-cell-head">
+                    <div class="phase-num-badge">5</div>
+                    <span class="phase-tag tag-advanced">Módulo Avançado</span>
                 </div>
-                <div class="phase-card">
-                    <div class="phase-card-head">
-                        <h4>Inteligência de Dados e Integração (BI)</h4>
-                        <span class="phase-tag tag-advanced">Módulo Avançado</span>
-                    </div>
-                    <p>Implantação de dashboards e integração de sistemas para visibilidade em tempo real de 100% da sua operação de exportação. O nível máximo de controle.</p>
-                </div>
+                <h4>Inteligência de Dados e Integração (BI)</h4>
+                <p>Implantação de dashboards e integração de sistemas para visibilidade em tempo real de 100% da sua operação de exportação. O nível máximo de controle.</p>
             </div>
-        </div>
 
-        <div class="phase-final-callout" data-aos="fade-up" data-aos-delay="200">
-            <div class="phase-final-icon"><i class="fa-solid fa-bullseye"></i></div>
-            <p><strong>Fase 5 representa o ápice da maturidade operacional:</strong> sua empresa exportando com inteligência, agilidade e controle total sobre cada etapa da cadeia logística.</p>
+            <div class="phase-cell phase-cell-final" data-aos="fade-up" data-aos-delay="380">
+                <div class="phase-cell-head">
+                    <div class="phase-num-badge"><i class="fa-solid fa-bullseye"></i></div>
+                    <span class="phase-tag tag-included">Ápice</span>
+                </div>
+                <h4>Maturidade Operacional Plena</h4>
+                <p><strong>Fase 5 é o ápice:</strong> sua empresa exportando com inteligência, agilidade e controle total sobre cada etapa da cadeia logística.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -1405,14 +1483,12 @@
         <div data-aos="fade-up" style="text-align: center;">
             <div class="eyebrow" style="justify-content: center;">Próximo Passo</div>
             <h2 class="slide-title">Vamos construir juntos a <span class="text-orange">melhor solução</span> para o seu negócio.</h2>
-            <p class="slide-subtitle" style="margin-left: auto; margin-right: auto;">A primeira conversa é direta com o nosso Sales Manager — sem intermediários, sem fricção. Você apresenta a operação; nós apresentamos onde estão as oportunidades.</p>
         </div>
 
         <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
             <div class="contact-left">
                 <div class="contact-eyebrow">Reunião de Alinhamento</div>
                 <h3>Sem compromisso.<br>Sem custo. Sem burocracia.</h3>
-                <p>Em uma conversa de 30 minutos, mapeamos juntos os principais pontos de atenção da sua operação e desenhamos como o Programa Exportação 360° pode se aplicar — adaptado ao seu volume, modais e mercados de destino.</p>
             </div>
             <div class="contact-right">
                 <div class="contact-rep">
@@ -1534,11 +1610,6 @@
     const progressBar = document.getElementById('scrollProgress');
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    const topNav = document.getElementById('topNav');
-
-    let lastScrollY = window.scrollY;
-    const SCROLL_THRESHOLD = 6;
-    const NAV_HIDE_AFTER = 120;
 
     function onScroll() {
         const currentY = window.scrollY;
@@ -1558,18 +1629,6 @@
                 link.classList.add('active');
             }
         });
-
-        const delta = currentY - lastScrollY;
-        if (Math.abs(delta) > SCROLL_THRESHOLD) {
-            if (currentY < NAV_HIDE_AFTER) {
-                topNav.classList.remove('nav-hidden');
-            } else if (delta > 0) {
-                topNav.classList.add('nav-hidden');
-            } else {
-                topNav.classList.remove('nav-hidden');
-            }
-            lastScrollY = currentY;
-        }
     }
     window.addEventListener('scroll', onScroll, { passive: true });
 
