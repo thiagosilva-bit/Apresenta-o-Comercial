@@ -291,7 +291,7 @@
         }
         .hero-logo-link:hover { transform: scale(1.03); }
         .hero-logo {
-            height: 88px; display: block;
+            height: 105px; display: block;
             filter: invert(1) hue-rotate(180deg) brightness(2) contrast(1.45) saturate(1.4)
                     drop-shadow(0 8px 24px rgba(244, 121, 32, 0.18));
         }
@@ -316,11 +316,34 @@
         }
         @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-        .hero h1 {
+        .hero h1.hero-project {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: clamp(1.95rem, 4.1vw, 3.1rem); font-weight: 800;
-            color: var(--text-main); line-height: 1.1; letter-spacing: -1.4px;
-            margin-bottom: 22px;
+            margin: 0 auto 22px; line-height: 1; letter-spacing: 0;
+            font-weight: 800;
+        }
+        .hero-project-name {
+            display: block;
+            font-size: clamp(2.6rem, 6vw, 4.7rem);
+            font-weight: 800; line-height: 1;
+            letter-spacing: -2.2px;
+        }
+        .hero-project-edition {
+            display: block;
+            font-size: clamp(0.78rem, 1.05vw, 0.95rem);
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-top: 18px;
+        }
+        .hero-tagline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(1.1rem, 1.85vw, 1.45rem);
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.25; letter-spacing: -0.4px;
+            max-width: 640px;
+            margin: 0 auto 24px;
         }
         .gradient-text {
             background: linear-gradient(120deg, var(--gnh-orange) 0%, var(--gnh-orange-soft) 50%, #FFB680 100%);
@@ -336,8 +359,8 @@
             max-width: 980px; margin: 0 auto;
         }
         .stat-card {
-            padding: 22px 22px; background: var(--bg-card); border: 1px solid var(--border-light);
-            border-radius: 16px; backdrop-filter: blur(12px); text-align: left;
+            padding: 28px 26px; background: var(--bg-card); border: 1px solid var(--border-light);
+            border-radius: 18px; backdrop-filter: blur(12px); text-align: left;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;
         }
         [data-theme="light"] .stat-card {
@@ -352,15 +375,16 @@
         .stat-card:hover { transform: translateY(-4px); border-color: var(--border-highlight); }
         .stat-card:hover::before { opacity: 1; }
         .stat-icon {
-            width: 42px; height: 42px; border-radius: 11px;
-            background: linear-gradient(135deg, rgba(244,121,32,0.15) 0%, rgba(244,121,32,0.05) 100%);
-            border: 1px solid rgba(244,121,32,0.2);
+            width: 52px; height: 52px; border-radius: 12px;
+            background: linear-gradient(135deg, rgba(244,121,32,0.18) 0%, rgba(244,121,32,0.05) 100%);
+            border: 1px solid rgba(244,121,32,0.25);
             display: inline-flex; align-items: center; justify-content: center;
-            font-size: 1rem; color: var(--gnh-orange); margin-bottom: 16px;
+            font-size: 1.25rem; color: var(--gnh-orange); margin-bottom: 18px;
         }
-        .stat-label { font-size: 0.72rem; font-weight: 700; color: var(--text-main);
-            letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-        .stat-desc { font-size: 0.88rem; color: var(--text-dim); line-height: 1.55; }
+        .stat-label { font-size: 1.1rem; font-weight: 800; color: var(--text-main);
+            letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif; }
+        .stat-desc { font-size: 0.96rem; color: var(--text-dim); line-height: 1.6; }
 
         /* === GRIDS === */
         .grid-2x2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
@@ -1071,7 +1095,6 @@
 <!-- NAV -->
 <nav class="top-nav" id="topNav">
     <a href="#inicio" class="nav-link active">Início</a>
-    <a href="#sobre" class="nav-link">Sobre</a>
     <a href="#cenario" class="nav-link">Cenário</a>
     <a href="#solucao" class="nav-link">Solução</a>
     <a href="#dimensoes" class="nav-link">Dimensões</a>
@@ -1093,8 +1116,11 @@
             <a href="https://nelsonheusi.com" target="_blank" rel="noopener" class="hero-logo-link" aria-label="Grupo Nelson Heusi">
                 <img src="logo-rodape-1.png" class="hero-logo" alt="Grupo Nelson Heusi">
             </a>
-            <div class="hero-status"><span class="dot"></span> Exportação 360° · Programa 2026</div>
-            <h1>Transformando <span class="gradient-text">gargalos</span><br>em vantagem competitiva.</h1>
+            <h1 class="hero-project">
+                <span class="hero-project-name gradient-text">Exportação 360°</span>
+                <span class="hero-project-edition">Programa 2026 · Grupo Nelson Heusi</span>
+            </h1>
+            <p class="hero-tagline">Transformando gargalos em vantagem competitiva.</p>
             <p class="lead">Como o nosso mapeamento eleva sua operação ao nível máximo de Segurança, Qualidade e Eficiência — da negociação ao destino final.</p>
         </div>
 
@@ -1118,60 +1144,8 @@
     </div>
 </section>
 
-<!-- 01 — SOBRE O GRUPO -->
-<section id="sobre" class="alt-bg" data-section-num="01">
-    <div class="container">
-        <div data-aos="fade-right">
-            <div class="eyebrow">Sobre o Grupo Nelson Heusi</div>
-            <h2 class="slide-title">Tecnologia, inteligência e <span class="text-orange">excelência operacional</span>.</h2>
-            <p class="slide-subtitle drop-cap">Integramos tecnologia avançada e sistemas unificados para transformar dados em eficiência operacional e inteligência estratégica — para que cada etapa do comércio internacional seja executada com método, segurança e propósito.</p>
-        </div>
-
-        <div class="grid-3" style="margin-bottom: 40px;">
-            <div class="pillar-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="pillar-icon"><i class="fa-solid fa-bullseye"></i></div>
-                <h4>Missão</h4>
-                <p>Entregar soluções em operações logísticas com alto impacto de comprometimento e inovação, gerando resultados que façam a diferença no mercado, nos negócios de cada cliente e na vida de cada colaborador.</p>
-            </div>
-            <div class="pillar-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="pillar-icon"><i class="fa-solid fa-eye"></i></div>
-                <h4>Visão</h4>
-                <p>Ser a primeira escolha do mercado — tanto para clientes quanto para colaboradores — reconhecida por segurança, qualidade e excelência operacional.</p>
-            </div>
-            <div class="pillar-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="pillar-icon"><i class="fa-solid fa-microchip"></i></div>
-                <h4>Tecnologia &amp; Inteligência</h4>
-                <p>Sistemas unificados que transformam dados em eficiência operacional e inteligência estratégica para os processos de exportação dos nossos clientes.</p>
-            </div>
-        </div>
-
-        <ul class="premium-list">
-            <li data-aos="fade-up" data-aos-delay="100">
-                <div class="li-icon"><i class="fa-solid fa-handshake-angle"></i></div>
-                <div class="list-text"><strong>Respeito, ética e responsabilidade</strong><span>Princípios não negociáveis em cada relação institucional, comercial e operacional.</span></div>
-            </li>
-            <li data-aos="fade-up" data-aos-delay="180">
-                <div class="li-icon"><i class="fa-solid fa-user-tie"></i></div>
-                <div class="list-text"><strong>Foco na experiência do cliente</strong><span>Cada decisão é orientada pelo impacto real percebido por quem opera junto conosco.</span></div>
-            </li>
-            <li data-aos="fade-up" data-aos-delay="260">
-                <div class="li-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
-                <div class="list-text"><strong>Inovação e melhoria contínua</strong><span>Processos vivos, em constante evolução, alinhados ao melhor padrão internacional.</span></div>
-            </li>
-            <li data-aos="fade-up" data-aos-delay="340">
-                <div class="li-icon"><i class="fa-solid fa-mountain-sun"></i></div>
-                <div class="list-text"><strong>Paixão por desafios</strong><span>Atuamos onde a complexidade é maior — porque é ali que o valor estratégico aparece.</span></div>
-            </li>
-            <li data-aos="fade-up" data-aos-delay="420">
-                <div class="li-icon"><i class="fa-solid fa-people-group"></i></div>
-                <div class="list-text"><strong>Juntos somos mais fortes</strong><span>Operações de exportação são times integrados — cliente, GNH e parceiros, sob um único objetivo.</span></div>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<!-- 02 — CENÁRIO -->
-<section id="cenario" data-section-num="02">
+<!-- 01 — CENÁRIO -->
+<section id="cenario" data-section-num="01">
     <div class="container">
         <div data-aos="fade-up">
             <div class="eyebrow">O Cenário</div>
@@ -1201,8 +1175,8 @@
     </div>
 </section>
 
-<!-- 03 — SOLUÇÃO / RAIO-X -->
-<section id="solucao" class="alt-bg" data-section-num="03">
+<!-- 02 — SOLUÇÃO / RAIO-X -->
+<section id="solucao" class="alt-bg" data-section-num="02">
     <div class="container">
         <div data-aos="fade-left">
             <div class="eyebrow">Nossa Solução</div>
@@ -1234,8 +1208,8 @@
     </div>
 </section>
 
-<!-- 04 — VISÃO PANORÂMICA / 4 DIMENSÕES -->
-<section id="dimensoes" data-section-num="04">
+<!-- 03 — VISÃO PANORÂMICA / 4 DIMENSÕES -->
+<section id="dimensoes" data-section-num="03">
     <div class="container">
         <div data-aos="fade-up">
             <div class="eyebrow">Visão Panorâmica</div>
@@ -1268,8 +1242,8 @@
     </div>
 </section>
 
-<!-- 05 — PILARES -->
-<section id="pilares" class="alt-bg" data-section-num="05">
+<!-- 04 — PILARES -->
+<section id="pilares" class="alt-bg" data-section-num="04">
     <div class="container">
         <div data-aos="fade-up">
             <div class="eyebrow">Engenharia Aplicada ao Crescimento</div>
@@ -1301,8 +1275,8 @@
     </div>
 </section>
 
-<!-- 06 — MAPEAMENTO 360° -->
-<section id="mapeamento" data-section-num="06">
+<!-- 05 — MAPEAMENTO 360° -->
+<section id="mapeamento" data-section-num="05">
     <div class="container">
         <div data-aos="fade-up">
             <div class="eyebrow">Como Fazemos</div>
@@ -1369,8 +1343,8 @@
     </div>
 </section>
 
-<!-- 07 — PRÓXIMOS PASSOS -->
-<section id="proximos-passos" class="alt-bg" data-section-num="07">
+<!-- 06 — PRÓXIMOS PASSOS -->
+<section id="proximos-passos" class="alt-bg" data-section-num="06">
     <div class="container">
         <div data-aos="fade-up" style="text-align: center;">
             <div class="eyebrow" style="justify-content: center;">Próximos Passos</div>
@@ -1410,8 +1384,8 @@
     </div>
 </section>
 
-<!-- 08 — JORNADA DE MATURIDADE -->
-<section id="jornada" data-section-num="08">
+<!-- 07 — JORNADA DE MATURIDADE -->
+<section id="jornada" data-section-num="07">
     <div class="container">
         <div data-aos="fade-up">
             <div class="eyebrow">Jornada de Maturidade</div>
@@ -1477,8 +1451,8 @@
     </div>
 </section>
 
-<!-- 09 — CONTATO -->
-<section id="contato" class="alt-bg" data-section-num="09">
+<!-- 08 — CONTATO -->
+<section id="contato" class="alt-bg" data-section-num="08">
     <div class="container">
         <div data-aos="fade-up" style="text-align: center;">
             <div class="eyebrow" style="justify-content: center;">Próximo Passo</div>
@@ -1535,7 +1509,6 @@
             <div class="footer-col">
                 <h5>Seções</h5>
                 <ul>
-                    <li><a href="#sobre">Sobre o GNH</a></li>
                     <li><a href="#cenario">Cenário</a></li>
                     <li><a href="#solucao">Solução</a></li>
                     <li><a href="#dimensoes">Dimensões</a></li>
